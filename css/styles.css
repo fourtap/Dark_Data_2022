@@ -22,7 +22,7 @@
   h1 {
     font-size: 2rem;
     text-align: center;
-    margin-top: 20vh;
+    margin-top: 2vh;
   }
 
   button,
@@ -197,13 +197,34 @@ form div:last-child {
 .frame{
   background-image: url("https://512pixels.net/downloads/macos-wallpapers/10-0_10.1.png");
   background-size: cover;
-
   border:2px solid black;
   width:90%;
   height:95%;
   margin: 0 5% 5% 5%;
+  overflow:hidden;
 }
 
+.frame_article{
+  background-color: white;
+  border:2px solid black;
+  width:90%;
+  height:95%;
+  margin: 0 5% 5% 5%;
+  overflow: scroll;
+}
+
+.article{
+    padding: 10px;
+    padding-left:5%;
+    padding-right:5%;
+    position:relative;
+}
+
+.article-pic{
+  width: 100%;
+  height:40%;
+  position:relative;
+}
 ul{
   width: 100%;
   height: 100%;
@@ -213,10 +234,10 @@ ul{
 }
 
 li {
-  width: 20%;
-  min-width:100px;
+  width: 23.33%;
+  min-width:200px;
   height:15%;
-  margin: 50px 100px 100px 50px;
+  margin: 6% 5% 6% 5%;
   float: left;
   position: relative;
   text-align: center;
@@ -225,5 +246,11 @@ li {
 img {
 	-webkit-transition: .8s;
   max-width: 100%;
-  float: left;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
