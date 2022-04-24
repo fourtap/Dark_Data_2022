@@ -1,0 +1,229 @@
+
+:root {
+    --white: white;
+    --gradient: linear-gradient(-45deg, #FFA600 0%, #FF5E03 50%);
+    --form: #eeefef;
+    --border-radius: 4px;
+    --form-width: 500px;
+    --form-mob-width: 320px;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font: 20px/1.5 sans-serif;
+    background: var(--white);
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20vh;
+  }
+
+  button,
+  label {
+    cursor: pointer;
+  }
+
+  label {
+    display: block;
+  }
+
+  button,
+  input,
+  textarea {
+    font-family: inherit;
+    font-size: 100%;
+    border: none;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+/* */
+  [type="checkbox"] {
+    position: absolute;
+    left: -9999px;
+  }
+
+/*CUSTOM VARIABLES HERE*/
+.about-label,
+.form {
+  position: fixed;
+  top: 50%;
+  right: 0;
+}
+
+.about-label {
+  transform-origin: top right;
+  transform: rotate(-90deg) translate(50%, -100%);
+  z-index: 2;
+}
+
+.form {
+  width: var(--form-width);
+  max-height: 90vh;
+  transform: translate(100%, -50%);
+  padding: 30px;
+  overflow: auto;
+  background: var(--form);
+  z-index: 1;
+}
+
+/*CUSTOM VARIABLES HERE*/
+
+.about-label,
+.form input,
+.form textarea,
+.form button {
+  border-radius: var(--border-radius);
+}
+
+.about-label,
+.form button {
+  background: var(--gradient);
+  color: var(--white);
+}
+
+.about-label:hover,
+.form button:hover {
+  filter: hue-rotate(-45deg);
+}
+
+.about-label {
+  padding: 5px 10px;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+form div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+form div:last-child {
+  text-align: right;
+}
+
+.form input,
+.form textarea {
+  padding: 0 5px;
+  width: 100%;
+}
+
+.form button {
+  padding: 10px 20px;
+  width: 50%;
+  max-width: 120px;
+}
+
+.form input {
+  height: 40px;
+}
+
+.form textarea {
+  height: 220px;
+}
+
+/* */
+[type="checkbox"]:checked + .about-label {
+    transform: rotate(-90deg) translate(50%, calc((var(--form-width) + 100%) * -1));
+  }
+
+  [type="checkbox"]:focus + .about-label {
+    outline: 2px solid rgb(77, 144, 254);
+  }
+
+  [type="checkbox"]:checked ~ .form {
+    transform: translate(0, -50%);
+  }
+
+  .about-label,
+  .form {
+    transition: all 0.35s ease-in-out;
+  }
+
+  /*CUSTOM VARIABLES HERE*/
+
+@media screen and (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+
+    .form {
+      padding: 15px;
+      width: var(--form-mob-width);
+    }
+
+    form div:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    [type="checkbox"]:checked + .about-label {
+      transform: rotate(-90deg) translate(50%, calc((var(--form-mob-width) + 100%) * -1));
+    }
+  }
+
+.container{
+  display:grid;
+  grid-template-columns: 7.5% 92.5%;
+  grid-template-rows: 7.5% 92.5%;
+  grid-template-areas:
+    "nav header "
+    "nav content ";
+  height: 100vh;
+}
+
+.nav{
+  grid-area: nav;
+  background-color: red;
+}
+
+.header{
+  grid-area: header;
+  background-color: #d1d5d8;
+}
+
+.content{
+  grid-area: content;
+  background-color: grey;
+  position:relative;
+}
+
+.frame{
+  background-image: url("https://512pixels.net/downloads/macos-wallpapers/10-0_10.1.png");
+  background-size: cover;
+
+  border:2px solid black;
+  width:90%;
+  height:95%;
+  margin: 0 5% 5% 5%;
+}
+
+ul{
+  width: 100%;
+  height: 100%;
+  float:left;
+  padding:10px;
+  list-style: none
+}
+
+li {
+  width: 20%;
+  min-width:100px;
+  height:15%;
+  margin: 50px 100px 100px 50px;
+  float: left;
+  position: relative;
+  text-align: center;
+}
+
+img {
+	-webkit-transition: .8s;
+  max-width: 100%;
+  float: left;
+}
