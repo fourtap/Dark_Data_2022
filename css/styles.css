@@ -1,11 +1,11 @@
 
 :root {
-    --white: white;
-    --gradient: linear-gradient(-45deg, #FFA600 0%, #FF5E03 50%);
-    --form: #eeefef;
-    --border-radius: 4px;
-    --form-width: 500px;
-    --form-mob-width: 320px;
+  --blue: #0809a3;
+  --gradient: linear-gradient(-45deg, #d1d5d8 0%, #d1d5d8 0%);
+  --form: #e5e5e5;
+  --border-radius: 0px;
+  --form-width: 400px;
+  --form-mob-width: 320px;
   }
 
   * {
@@ -19,19 +19,9 @@
     background: var(--white);
   }
 
-  h1 {
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 2vh;
-  }
-
-  button,
-  label {
-    cursor: pointer;
-  }
-
   label {
     display: block;
+    height:7.5vw;
   }
 
   button,
@@ -39,12 +29,11 @@
   textarea {
     font-family: inherit;
     font-size: 100%;
-    border: none;
+    border: 1px solid black;
   }
 
-  textarea {
-    resize: none;
-  }
+/* */
+/*CUSTOM VARIABLES HERE*/
 
 /* */
   [type="checkbox"] {
@@ -55,21 +44,25 @@
 /*CUSTOM VARIABLES HERE*/
 .about-label,
 .form {
+  font-size: 80%;
   position: fixed;
   top: 50%;
-  right: 0;
+  left: 0;
 }
 
 .about-label {
-  transform-origin: top right;
-  transform: rotate(-90deg) translate(50%, -100%);
-  z-index: 2;
+  top: 20%;
+  font-size: 4vw;
+  transform-origin: top left;
+  transform: rotate(90deg) translate(-50%, -100%);
+  z-index: 1;
 }
 
 .form {
   width: var(--form-width);
-  max-height: 90vh;
-  transform: translate(100%, -50%);
+  /* max-height: 90vh;*/
+  height:100%;
+  transform: translate(-100%, -50%);
   padding: 30px;
   overflow: auto;
   background: var(--form);
@@ -88,17 +81,18 @@
 .about-label,
 .form button {
   background: var(--gradient);
-  color: var(--white);
+  color: var(--blue);
 }
 
 .about-label:hover,
 .form button:hover {
-  filter: hue-rotate(-45deg);
+  filter: hue-rotate(0deg);
 }
 
 .about-label {
-  padding: 5px 10px;
+  padding: 10px 100%;
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+  outline: 2px solid #0809a3;
 }
 
 form div:not(:last-child) {
@@ -131,11 +125,11 @@ form div:last-child {
 
 /* */
 [type="checkbox"]:checked + .about-label {
-    transform: rotate(-90deg) translate(50%, calc((var(--form-width) + 100%) * -1));
+    transform: rotate(90deg) translate(-50%, calc((var(--form-width) + 100%) * -1));
   }
 
   [type="checkbox"]:focus + .about-label {
-    outline: 2px solid rgb(77, 144, 254);
+    outline: 2px solid rgb(8, 9, 163);
   }
 
   [type="checkbox"]:checked ~ .form {
@@ -146,6 +140,85 @@ form div:last-child {
   .form {
     transition: all 0.35s ease-in-out;
   }
+
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 0px;
+    z-index: 10;
+    background-color: white;
+    width: 900px;
+    height: 550px;
+    max-width: 80%;
+  }
+
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    background: #0809a3;
+  }
+
+  .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .modal-body {
+    padding: 10px 15px;
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+  }
+
+  #overlay.active {
+    opacity: 0;
+    pointer-events: all;
+  }
+
+  #container
+      {
+        text-align: center;
+      }
+
+
+/* square in the form */
+
+
 
   /*CUSTOM VARIABLES HERE*/
 
@@ -180,17 +253,17 @@ form div:last-child {
 
 .nav{
   grid-area: nav;
-  background-color: red;
+  background: var(--gradient);
 }
 
 .header{
   grid-area: header;
-  background-color: #d1d5d8;
+  background: var(--gradient);
 }
 
 .content{
   grid-area: content;
-  background-color: grey;
+  background: var(--gradient);
   position:relative;
 }
 
@@ -253,4 +326,14 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+#sideNote{
+  text-align: left;
+  padding-top: 10px;
+  padding-left:15px;
+  padding:right: 20px;
+  left: 10px;
+  height: calc(100% - 150px);
+  border: 2px solid black;
 }
