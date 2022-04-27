@@ -269,6 +269,10 @@ form div:last-child {
   background: var(--gradient);
 }
 
+#top-bar{
+  margin:1% 5% 1% 5%;
+}
+
 .content{
   grid-area: content;
   background: var(--gradient);
@@ -322,6 +326,10 @@ li {
   float: left;
   position: relative;
   text-align: center;
+}
+
+li.p{
+  font-size:60%;
 }
 
 img {
