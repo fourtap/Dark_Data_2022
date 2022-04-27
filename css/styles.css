@@ -19,23 +19,24 @@
     background: var(--white);
   }
 
-  label {
-    display: block;
-    height:7.5vw;
-  }
-
-  button,
-  input,
-  textarea {
-    font-family: inherit;
-    font-size: 100%;
-    border: 1px solid black;
-  }
+/* */
+/* CSS for the about section*/
 
 /* */
-/*CUSTOM VARIABLES HERE*/
 
-/* */
+label {
+  display: block;
+  height:7.5vw;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  border: 1px solid black;
+}
+
   [type="checkbox"] {
     position: absolute;
     left: -9999px;
@@ -215,8 +216,15 @@ form div:last-child {
         text-align: center;
       }
 
-
-/* square in the form */
+  #sideNote{
+  text-align: left;
+  padding-top: 10px;
+  padding-left:15px;
+  padding:right: 20px;
+  left: 10px;
+  height: calc(100% - 150px);
+  border: 2px solid black;
+}
 
 
 
@@ -326,14 +334,4 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
-}
-
-#sideNote{
-  text-align: left;
-  padding-top: 10px;
-  padding-left:15px;
-  padding:right: 20px;
-  left: 10px;
-  height: calc(100% - 150px);
-  border: 2px solid black;
 }
