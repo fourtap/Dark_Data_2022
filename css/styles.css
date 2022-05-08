@@ -411,11 +411,16 @@ li > p{
   font-size:75%;
 }
 
-li >p >a{
-  color:var(--blue);
+a{
+  text-decoration: none;
 }
 
-li>img, #thumbnail-pic {
+a > p{
+  color:white;
+  font-size:75%;
+}
+
+li>img, #thumbnail-pic,.thumbnail-img {
 	-webkit-transition: .8s;
   width:75px;
   height:75px;
