@@ -16,6 +16,7 @@
 
   body {
     font: 20px/1.5 sans-serif;
+    font-family: 'IBM Plex Sans Condensed';
     background: var(--white);
   }
 
@@ -43,8 +44,7 @@ textarea {
   }
 
 /*CUSTOM VARIABLES HERE*/
-.about-label,
-.form {
+.about-label,.form {
   font-size: 80%;
   position: fixed;
   top: 50%;
@@ -159,15 +159,26 @@ form div:last-child {
   background: #0809a3;
   position: sticky;
   top: 0;
-  z-index:1;
+  z-index:2;
 }
 
-.modal-header .title {
+.modal-header {
   font-size: 1.25rem;
   font-weight: bold;
   color: white;
   position: sticky;
   top: 5;
+}
+p.separator {
+    height: 2vh;
+    width: 50%;
+    border: 0;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.title{
+  margin-left: 2vh;
 }
 
 .modal-header .close-button {
@@ -190,8 +201,21 @@ form div:last-child {
   'opsz' 48,
 }
 
+#modal-pic{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+
 .modal-body {
   padding: 10px 15px;
+  line-height:200%;
+  margin:5% 10% 5% 10%;
+}
+
+.modal-body > p{
+  font-size:14px;
 }
 
 #overlay {
@@ -290,7 +314,7 @@ form div:last-child {
 }
 
 #top-bar{
-  margin:2% 5% 1% 5%;
+  margin:1.2% 5% 1% 5%;
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -340,6 +364,7 @@ select {
   grid-area: content;
   background: var(--gradient);
   position:relative;
+  min-height:600px;
 }
 
 .frame{
@@ -348,6 +373,7 @@ select {
   border:2px solid black;
   width:90%;
   height:95%;
+  min-height:600px;
   margin: 0 5% 5% 5%;
 }
 
@@ -366,24 +392,46 @@ select {
   cursor:pointer;
 }
 
+.filler{
+  border:2px solid black;
+  width:89%;
+  height:95%;
+  margin: 1% 5% 5% 6%;
+  z-index:-1;
+}
+
 .frame_article{
+  position:absolute;
   background-color: white;
   border:2px solid black;
-  width:90%;
+  width:89%;
   height:95%;
-  margin: 0 5% 5% 5%;
+  top:0;
+  left:5%;
   overflow:scroll;
 }
 
 .article{
     padding: 10px;
-    padding-left:5%;
-    padding-right:5%;
+    padding-left:12%;
+    padding-right:12%;
     position:relative;
     line-height:200%;
+    z-index:1;
+}
+
+
+
+.article > h1{
+  text-align: center;
+}
+
+.article >p {
+  font-size:1em;
 }
 
 .article-pic{
+  margin:5% 5% 10% 5%;
   display: block;
   position: relative;
 }
@@ -430,6 +478,7 @@ li>img, #thumbnail-pic,.thumbnail-img {
   width:100px;
   height:100px;
 }
+
 .center {
   display: block;
   margin-left: auto;
