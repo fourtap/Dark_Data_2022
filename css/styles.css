@@ -215,7 +215,7 @@ p.separator {
 }
 
 .modal-body > p{
-  font-size:14px;
+  font-size:1em;
 }
 
 #overlay {
@@ -413,8 +413,8 @@ select {
 
 .article{
     padding: 10px;
-    padding-left:12%;
-    padding-right:12%;
+    padding-left:15%;
+    padding-right:15%;
     position:relative;
     line-height:200%;
     z-index:1;
@@ -445,13 +445,17 @@ ul{
 }
 
 li {
-  width: 150px;
-  min-width:200px;
-  height:150px;
-  margin: 5% 4% 5% 4%;
+  width: 10%;
+  min-width:150px;
+  margin: 5% 6% 5% 6%;
   float: left;
   position: relative;
   text-align: center;
+}
+
+li:after{
+  content:"";
+  float:left;
 }
 
 li > p{
@@ -468,10 +472,26 @@ a > p{
   font-size:75%;
 }
 
-li>img, #thumbnail-pic,.thumbnail-img {
-	-webkit-transition: .8s;
-  width:75px;
-  height:75px;
+.img-container {
+  position: relative;
+  width: 100%; /* The size you want */
+}
+.img-container:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+}
+
+.img-container img {
+  position: absolute; /* Take your picture out of the flow */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; /* Make the picture taking the size of it's parent */
+  width: 100%; /* This if for the object-fit */
+  height: 100%; /* This if for the object-fit */
+  object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+  object-position: center;
 }
 
 #thumbnail-pic{
