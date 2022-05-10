@@ -412,9 +412,9 @@ select {
 }
 
 .article{
+    max-width:1000px;
     padding: 10px;
-    padding-left:15%;
-    padding-right:15%;
+    margin: 0 auto;
     position:relative;
     line-height:200%;
     z-index:1;
@@ -427,7 +427,7 @@ select {
 }
 
 .article >p {
-  font-size:1em;
+  font-size:140%;
 }
 
 .article-pic{
