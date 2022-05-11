@@ -661,13 +661,18 @@ a > p{
     width: 12%;
     min-width:90px;
     max-height:110px;
-    margin: 3% 6% 8% 6%;
+    margin: 4% 6% 9% 6%;
     padding:5px;
     float: left;
     position: relative;
     text-align: center;
     overflow:visible;
     display:block;
+  }
+
+  a > p{
+    color:white;
+    font-size:0.7em;
   }
 
   #thumbnail-pic{
