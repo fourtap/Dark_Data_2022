@@ -171,12 +171,10 @@ form div:last-child {
 }
 p.separator {
     height: 2vh;
-    width: 50%;
     border: 0;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
     position:relative;
-    right:20px;
 }
 
 .title{
