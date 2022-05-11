@@ -5,7 +5,7 @@
   --form: #e5e5e5;
   --border-radius: 0px;
   --form-width: 400px;
-  --form-mob-width: 320px;
+  --form-mob-width: 300px;
   }
 
   * {
@@ -276,24 +276,7 @@ p.separator {
 
   /*CUSTOM VARIABLES HERE*/
 
-@media screen and (max-width: 600px) {
-    body {
-      font-size: 16px;
-    }
 
-    .form {
-      padding: 15px;
-      width: var(--form-mob-width);
-    }
-
-    form div:not(:last-child) {
-      margin-bottom: 10px;
-    }
-
-    [type="checkbox"]:checked + .about-label {
-      transform: rotate(-90deg) translate(50%, calc((var(--form-mob-width) + 100%) * -1));
-    }
-  }
 
 .container{
   display:grid;
@@ -381,6 +364,8 @@ select {
   height:95%;
   min-height:600px;
   margin: 0 5% 5% 5%;
+  overflow:scroll;
+  overflow-x:hidden;
 }
 
 #editors-notes{
@@ -415,6 +400,7 @@ select {
   top:0;
   left:5%;
   overflow:scroll;
+  overflow-x: hidden;
 }
 
 .article{
@@ -461,7 +447,7 @@ select {
   list-style: none
 }
 
-#thumbul >li {
+.listitem {
   width: 12%;
   min-width:150px;
   margin: 5% 6% 5% 6%;
@@ -469,25 +455,21 @@ select {
   float: left;
   position: relative;
   text-align: center;
+  max-height:210px;
+  overflow:visible;
 }
 
-#thumbul >li:after{
-  content:"";
-  float:left;
-}
-
-#thumbul >li > a > p{
-  color:white;
-  font-size:1vw;
-}
-
-#thumbul >li > a{
+.listitem >a{
   text-decoration: none;
 }
 
 a > p{
   color:white;
-  font-size:1em;
+  font-size:1.1em;
+}
+
+.author{
+  font-size:0.9em;
 }
 
 .img-container {
@@ -497,18 +479,18 @@ a > p{
 .img-container:after {
   content: "";
   display: block;
-  padding-bottom: 100%; /* The padding depends on the width, not on the height, so with a padding-bottom of 100% you will get a square */
+  padding-bottom: 100%;
 }
 
 .img-container img {
-  position: absolute; /* Take your picture out of the flow */
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; /* Make the picture taking the size of it's parent */
-  width: 100%; /* This if for the object-fit */
-  height: 100%; /* This if for the object-fit */
-  object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -523,4 +505,127 @@ a > p{
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+
+    .form {
+      padding: 15px;
+      width: var(--form-mob-width);
+    }
+
+    form div:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    [type="checkbox"]:checked + .about-label {
+      transform: rotate(90deg) translate(-50%, calc((var(--form-mob-width) + 100%) *-1));
+    }
+
+    label {
+      display: block;
+      height:20vw;
+    }
+
+    p.separator {
+        height: 2vh;
+        width: 0%;
+        border: 0;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        position:relative;
+        right:20px;
+    }
+
+    .listitem {
+      width: 12%;
+      min-width:100px;
+      max-height:115px;
+      margin: 6% 6% 8% 8%;
+      padding:5px;
+      float: left;
+      position: relative;
+      text-align: center;
+      overflow:visible;
+      display:block;
+    }
+
+    .about-label {
+      top: 50%;
+      font-size: 4vw;
+      transform-origin: top left;
+      transform: rotate(90deg) translate(-50%, -100%);
+      z-index: 10;
+    }
+
+    a > p{
+      color:white;
+      font-size:0.8em;
+    }
+    .author{
+      font-size:0.72em;
+    }
+
+    label {
+      display: block;
+      height:12vw;
+    }
+
+    .about-label {
+      padding: 10px 120%;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
+      outline: 2px solid #0809a3;
+    }
+
+    #thumbnail-pic{
+      width:50px;
+      height:50px;
+      transform:translate(-1.5em,3em);
+    }
+
+    .frame_article{
+      position:absolute;
+      background-color: white;
+      border:2px solid black;
+      width:89%;
+      height:95%;
+      top:0;
+      left:5%;
+      overflow:scroll;
+      overflow-x:hidden;
+      scroll-behavior: smooth;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+    ::-webkit-scrollbar-thumb {
+        background: #FF0000;
+    }
+  }
+
+@media screen and (max-width: 400px){
+  .listitem {
+    width: 12%;
+    min-width:90px;
+    max-height:110px;
+    margin: 3% 6% 8% 6%;
+    padding:5px;
+    float: left;
+    position: relative;
+    text-align: center;
+    overflow:visible;
+    display:block;
+  }
+
+  #thumbnail-pic{
+    width:50px;
+    height:50px;
+    transform:translate(-1.5em,3em);
+  }
 }
