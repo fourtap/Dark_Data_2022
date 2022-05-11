@@ -15,7 +15,7 @@
   }
 
   body {
-    font-size:16px;
+    font: 20px/1.5 sans-serif;
     font-family: 'IBM Plex Sans Condensed';
     background: var(--white);
   }
@@ -268,6 +268,7 @@ p.separator {
   padding-left:15px;
   padding:right: 20px;
   left: 10px;
+  height: calc(100% - 150px);
   border: 2px solid black;
 }
 
@@ -398,7 +399,7 @@ select {
   height:95%;
   top:0;
   left:5%;
-  overflow-y:auto;
+  overflow:scroll;
   overflow-x: hidden;
 }
 
@@ -406,9 +407,7 @@ select {
     max-width:1000px;
     padding: 10px;
     margin: 0 auto;
-    margin-bottom: 20px;
     position:relative;
-    overflow:scroll;
     line-height:200%;
     z-index:1;
 }
@@ -450,14 +449,13 @@ select {
 
 .listitem {
   width: 12%;
-  max-width:150px;
-  min-width:100px;
-  max-height:145px;
-  margin: 3% 6% 10% 6%;
+  min-width:150px;
+  margin: 5% 6% 5% 6%;
   padding:5px;
   float: left;
   position: relative;
   text-align: center;
+  max-height:210px;
   overflow:visible;
 }
 
@@ -509,27 +507,6 @@ a > p{
   width: 50%;
 }
 
-@media screen and (max-width: 1150px){
-  body {
-    font-size:16px;
-    font-family: 'IBM Plex Sans Condensed';
-    background: var(--white);
-  }
-
-  .listitem {
-    width: 12%;
-    max-width:150px;
-    min-width:100px;
-    max-height:140px;
-    margin: 3% 6% 5% 6%;
-    padding:5px;
-    float: left;
-    position: relative;
-    text-align: center;
-    overflow:visible;
-  }
-}
-
 @media screen and (max-width: 600px) {
     body {
       font-size: 16px;
@@ -552,21 +529,6 @@ a > p{
       display: block;
       height:20vw;
     }
-
-    #top-bar{
-      margin:4% 5% 1% 5%;
-      display:flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-    }
-
-    #top-left, #top-mid, #top-right{
-      font-size: 0.8em;
-    }
-
-
-
 
     p.separator {
         height: 2vh;
@@ -650,7 +612,7 @@ a > p{
 @media screen and (max-width: 400px){
   .listitem {
     width: 12%;
-    min-width:90px;
+    min-width:85px;
     max-height:110px;
     margin: 3% 6% 8% 6%;
     padding:5px;
