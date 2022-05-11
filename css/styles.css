@@ -15,7 +15,7 @@
   }
 
   body {
-    font-size:16px;
+    /*font-size:16px;*/
     font-family: 'IBM Plex Sans Condensed';
     background: var(--white);
   }
@@ -45,7 +45,7 @@ textarea {
 
 /*CUSTOM VARIABLES HERE*/
 .about-label,.form {
-  font-size: 80%;
+  font-size: 100%;
   position: fixed;
   top: 50%;
   left: 0;
@@ -353,6 +353,10 @@ select {
   min-height:600px;
 }
 
+iframe{
+  margin:0 auto;
+}
+
 .frame{
   background-image: url("https://512pixels.net/downloads/macos-wallpapers/10-0_10.1.png");
   background-size: cover;
@@ -401,7 +405,7 @@ select {
 }
 
 .article{
-    max-width:1000px;
+    max-width:900px;
     padding: 10px;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -436,6 +440,12 @@ select {
   margin:5% 5% 10% 5%;
   display: block;
   position: relative;
+  align-items: center;
+}
+
+.video-div{
+  margin:5% 5% 10% 5%;
+  text-align: center;
 }
 
 #thumbul{
