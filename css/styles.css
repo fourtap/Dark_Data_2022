@@ -703,8 +703,9 @@ a > p{
       overflow-x:hidden;
       scroll-behavior: smooth;
     }
-
-
+    .article{
+        margin-bottom: 40px;
+    }
 
     ::-webkit-scrollbar {
         width: 0;  /* Remove scrollbar space */
