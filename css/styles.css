@@ -411,7 +411,7 @@ iframe{
     margin: 0 auto;
     margin-bottom: 20px;
     position:relative;
-    overflow:scroll;
+    overflow:hidden;
     line-height:200%;
     z-index:1;
 }
