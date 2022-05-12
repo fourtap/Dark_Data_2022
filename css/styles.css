@@ -433,6 +433,10 @@ iframe{
   font-size:1em;
 }
 
+.indent{
+  text-indent:40px;
+}
+
 .article > ul{
   margin-left:10%;
 }
@@ -574,8 +578,9 @@ a > p{
       font-size: 0.8em;
     }
 
-
-
+    .indent{
+      text-indent: 32px;
+    }
 
     p.separator {
         height: 2vh;
@@ -618,11 +623,11 @@ a > p{
 
     label {
       display: block;
-      height:12vw;
+      height:6vw;
     }
 
     .about-label {
-      padding: 10px 120%;
+      padding: 3px 8%;
       border-radius: var(--border-radius) var(--border-radius) 0 0;
       outline: 2px solid #0809a3;
     }
@@ -637,14 +642,16 @@ a > p{
       position:absolute;
       background-color: white;
       border:2px solid black;
-      width:89%;
+      width:90%;
       height:95%;
       top:0;
-      left:5%;
+      left:0;
       overflow:scroll;
       overflow-x:hidden;
       scroll-behavior: smooth;
     }
+
+
 
     ::-webkit-scrollbar {
         width: 0;  /* Remove scrollbar space */
