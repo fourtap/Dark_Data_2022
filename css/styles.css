@@ -601,6 +601,11 @@ a > p{
       height:20vw;
     }
 
+    .title{
+      max-width:210px;
+      overflow:visible;
+    }
+
     #top-bar{
       margin:4% 5% 1% 0%;
       display:flex;
@@ -716,10 +721,6 @@ a > p{
         background: #FF0000;
     }
   }
-
-@media screen and (max-width: 460px;){
-
-}
 
 @media screen and (max-width: 400px){
   .listitem {
