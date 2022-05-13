@@ -701,13 +701,18 @@ a > p{
       background-color: white;
       border:2px solid black;
       width:90%;
-      height:95%;
+      height:96%;
       top:0;
       left:0;
       overflow:scroll;
       overflow-x:hidden;
       scroll-behavior: smooth;
     }
+
+    .filler{
+      height:96.5%;
+    }
+
     .article{
         margin-bottom: 40px;
     }
@@ -743,6 +748,10 @@ a > p{
   a > p{
     color:white;
     font-size:0.7em;
+  }
+
+  .title{
+    max-width: 180px;
   }
 
   #thumbnail-pic{
